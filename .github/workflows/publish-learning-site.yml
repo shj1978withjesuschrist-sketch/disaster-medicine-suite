@@ -32,12 +32,21 @@ jobs:
       - name: Check the language entries and illustration set
         working-directory: public-site
         run: |
-          test -s ko/index.html
-          test -s en/index.html
-          test "$(find ko/games -name index.html | wc -l)" -eq 5
-          test "$(find en/games -name index.html | wc -l)" -eq 5
-          test "$(find media -name '*.webp' | wc -l)" -eq 14
-          test -z "$(find . -name '*.js' -print -quit)"
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          catalog = json.loads(Path('curriculum.json').read_text(encoding='utf-8'))
+          games = catalog['games']
+          assert catalog['scope'] == 'full-catalog' and len(games) == 14
+          assert len({g['folder'] for g in games}) == 14
+          for lang in ('ko', 'en'):
+              assert Path(lang, 'index.html').is_file()
+              expected = {Path(lang, 'games', g['folder'], r['file']) for g in games for r in g['routes']}
+              assert set(Path(lang, 'games').rglob('*.html')) == expected
+              assert all(p.stat().st_size > 0 for p in expected)
+          assert len(list(Path('media').glob('*.webp'))) == 14
+          assert not list(Path('.').rglob('*.js'))
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload the learning site

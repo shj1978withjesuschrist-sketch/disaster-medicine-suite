@@ -1,8 +1,47 @@
 {
   "edition": "public-learner",
   "format": "html",
+  "scope": "full-catalog",
   "triageCases": 12,
   "games": [
+    {
+      "id": "campaign-world",
+      "folder": "01-campaign-world",
+      "title": {
+        "ko": "재난 대응 월드 캠페인",
+        "en": "Disaster World Campaign"
+      },
+      "description": {
+        "ko": "침수 대피소와 폭염 쉼터 중 한 현장을 골라 첫 접수부터 교대까지 이어가세요.",
+        "en": "Choose a flood shelter or heat relief centre and lead one shift from arrival to handover."
+      },
+      "group": "start",
+      "category": {
+        "ko": "입문",
+        "en": "Foundations"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "flood",
+          "title": {
+            "ko": "침수 대피소",
+            "en": "Flood shelter"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        },
+        {
+          "id": "heat",
+          "title": {
+            "ko": "폭염 쉼터",
+            "en": "Heat relief centre"
+          },
+          "rounds": 4,
+          "file": "heat.html"
+        }
+      ]
+    },
     {
       "id": "start-triage",
       "folder": "02-start-triage",
@@ -17,7 +56,49 @@
       "category": {
         "ko": "현장",
         "en": "Field"
-      }
+      },
+      "group": "start",
+      "rounds": 12,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "START 트리아지 데스크",
+            "en": "START Triage Desk"
+          },
+          "rounds": 12,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "cbrne-response",
+      "folder": "03-cbrne-response",
+      "title": {
+        "ko": "CBRNE 현장 대응 랩",
+        "en": "CBRNE Response Lab"
+      },
+      "description": {
+        "ko": "공식 안내를 확인하고 주민의 대기·이동·가족 연락을 차례로 지원하세요.",
+        "en": "Work through an official advisory, accessible waiting arrangements and family updates."
+      },
+      "group": "field",
+      "category": {
+        "ko": "현장",
+        "en": "Field"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "주민 안내",
+            "en": "Resident support"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        }
+      ]
     },
     {
       "id": "mci-commander",
@@ -33,7 +114,49 @@
       "category": {
         "ko": "협업",
         "en": "Teamwork"
-      }
+      },
+      "group": "field",
+      "rounds": 3,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "다수사상자 대응 지휘",
+            "en": "Mass Casualty Coordination"
+          },
+          "rounds": 3,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "disaster-quiz",
+      "folder": "05-disaster-quiz",
+      "title": {
+        "ko": "재난의학 핵심 퀴즈 아레나",
+        "en": "Disaster Medicine Quiz Arena"
+      },
+      "description": {
+        "ko": "현장 기록, 환자 흐름, 의사소통 문제를 풀고 판단 근거를 확인하세요.",
+        "en": "Test your reasoning about field records, patient flow and communication."
+      },
+      "group": "start",
+      "category": {
+        "ko": "입문",
+        "en": "Foundations"
+      },
+      "rounds": 6,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "현장 지식",
+            "en": "Field knowledge"
+          },
+          "rounds": 6,
+          "file": "index.html"
+        }
+      ]
     },
     {
       "id": "ethical-dilemmas",
@@ -49,7 +172,20 @@
       "category": {
         "ko": "협업",
         "en": "Teamwork"
-      }
+      },
+      "group": "team",
+      "rounds": 3,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "재난 윤리 회의",
+            "en": "Disaster Ethics"
+          },
+          "rounds": 3,
+          "file": "index.html"
+        }
+      ]
     },
     {
       "id": "leadership-challenge",
@@ -65,7 +201,20 @@
       "category": {
         "ko": "협업",
         "en": "Teamwork"
-      }
+      },
+      "group": "team",
+      "rounds": 3,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "현장 리더십",
+            "en": "Field Leadership"
+          },
+          "rounds": 3,
+          "file": "index.html"
+        }
+      ]
     },
     {
       "id": "teamwork-mission",
@@ -81,7 +230,203 @@
       "category": {
         "ko": "협업",
         "en": "Teamwork"
-      }
+      },
+      "group": "team",
+      "rounds": 3,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "팀워크 미션",
+            "en": "Teamwork Missions"
+          },
+          "rounds": 3,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "cbrne-advanced",
+      "folder": "09-cbrne-advanced",
+      "title": {
+        "ko": "CBRNE 심화 대응 지휘",
+        "en": "Advanced CBRNE Coordination"
+      },
+      "description": {
+        "ko": "두 지원팀을 배정하고, 여러 기관에서 들어온 상황 보고를 하나의 인계로 정리하세요.",
+        "en": "Allocate two support teams and turn reports from several agencies into a shared handover."
+      },
+      "group": "field",
+      "category": {
+        "ko": "현장",
+        "en": "Field"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "지원소 교대 지휘",
+            "en": "Support-centre command"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "tactical-medicine",
+      "folder": "10-tactical-medicine",
+      "title": {
+        "ko": "전술의학 환자 인계",
+        "en": "Tactical Medicine Handover"
+      },
+      "description": {
+        "ko": "안전이 확인된 진료 지점에서 환자 기록을 확인하고 다음 의료진에게 인계하세요.",
+        "en": "At a cleared care point, verify patient observations and transfer responsibility to the receiving team."
+      },
+      "group": "field",
+      "category": {
+        "ko": "현장",
+        "en": "Field"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "진료 지점 인계",
+            "en": "Care-point handover"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "counter-terrorism-med",
+      "folder": "11-counter-terrorism-med",
+      "title": {
+        "ko": "대테러의학 피해자 지원",
+        "en": "Counter-Terrorism Medicine · Survivor Support"
+      },
+      "description": {
+        "ko": "사건 이후 지원센터에서 가족 문의, 신원 확인, 후속 진료를 조율하세요.",
+        "en": "Coordinate family enquiries, identity checks and follow-up care at a post-incident support centre."
+      },
+      "group": "field",
+      "category": {
+        "ko": "현장",
+        "en": "Field"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "피해자·가족 지원센터",
+            "en": "Survivor and family support"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "hseep-exercise-design",
+      "folder": "12-hseep-exercise-design",
+      "title": {
+        "ko": "HSEEP 재난훈련 설계 스튜디오",
+        "en": "HSEEP Exercise Design Studio"
+      },
+      "description": {
+        "ko": "대피소 훈련의 목표와 평가 기준을 맞추고 개선 계획을 작성하세요.",
+        "en": "Design a shelter exercise, match its objectives to evidence and write an improvement plan."
+      },
+      "group": "planning",
+      "category": {
+        "ko": "설계",
+        "en": "Planning"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "대피소 탁상훈련 설계",
+            "en": "Shelter tabletop design"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        }
+      ]
+    },
+    {
+      "id": "surge-chain",
+      "folder": "13-surge-chain",
+      "title": {
+        "ko": "SURGE 환자 흐름·병상 대응",
+        "en": "SURGE Patient Flow Chain"
+      },
+      "description": {
+        "ko": "주간 이송과 야간 병상 조정 중 한 경로를 골라 수용 능력과 환자 수를 맞추세요.",
+        "en": "Choose daytime transfers or night bed coordination and match patient demand to staffed capacity."
+      },
+      "group": "field",
+      "category": {
+        "ko": "현장",
+        "en": "Field"
+      },
+      "rounds": 4,
+      "routes": [
+        {
+          "id": "day",
+          "title": {
+            "ko": "주간 이송",
+            "en": "Day transfers"
+          },
+          "rounds": 4,
+          "file": "index.html"
+        },
+        {
+          "id": "night",
+          "title": {
+            "ko": "야간 병상 조정",
+            "en": "Night bed coordination"
+          },
+          "rounds": 4,
+          "file": "night.html"
+        }
+      ]
+    },
+    {
+      "id": "boss-raid",
+      "folder": "14-boss-raid",
+      "title": {
+        "ko": "파이널 재난 보스 레이드",
+        "en": "Final Disaster Capstone Raid"
+      },
+      "description": {
+        "ko": "폭풍 다음 날의 현장 보고, 환자 인계, 이송, 가족 지원을 한 교대에서 완수하세요.",
+        "en": "Complete a single post-storm shift covering reporting, patient handover, transport and family support."
+      },
+      "group": "planning",
+      "category": {
+        "ko": "설계",
+        "en": "Planning"
+      },
+      "rounds": 5,
+      "routes": [
+        {
+          "id": "main",
+          "title": {
+            "ko": "폭풍 다음 날",
+            "en": "The shift after the storm"
+          },
+          "rounds": 5,
+          "file": "index.html"
+        }
+      ]
     }
   ]
 }
