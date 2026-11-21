@@ -1,0 +1,87 @@
+{
+  "edition": "public-learner",
+  "format": "html",
+  "triageCases": 12,
+  "games": [
+    {
+      "id": "start-triage",
+      "folder": "02-start-triage",
+      "title": {
+        "ko": "START 트리아지 데스크",
+        "en": "START Triage Desk"
+      },
+      "description": {
+        "ko": "환자의 착의 전신과 체표 도판을 살피고 우선순위를 표시하세요.",
+        "en": "Inspect the patient's clothed scene and surface plate, then assign a triage tag."
+      },
+      "category": {
+        "ko": "현장",
+        "en": "Field"
+      }
+    },
+    {
+      "id": "mci-commander",
+      "folder": "04-mci-commander",
+      "title": {
+        "ko": "다수사상자 대응 지휘",
+        "en": "Mass Casualty Coordination"
+      },
+      "description": {
+        "ko": "현장 보고를 읽고 제한된 대응 자원을 배분하세요.",
+        "en": "Read field reports and allocate the available response teams."
+      },
+      "category": {
+        "ko": "협업",
+        "en": "Teamwork"
+      }
+    },
+    {
+      "id": "ethical-dilemmas",
+      "folder": "06-ethical-dilemmas",
+      "title": {
+        "ko": "재난 윤리 회의",
+        "en": "Disaster Ethics"
+      },
+      "description": {
+        "ko": "환자와 가족의 입장을 살피고 팀의 결정을 내리세요.",
+        "en": "Consider patients and families, then make a decision with the team."
+      },
+      "category": {
+        "ko": "협업",
+        "en": "Teamwork"
+      }
+    },
+    {
+      "id": "leadership-challenge",
+      "folder": "07-leadership-challenge",
+      "title": {
+        "ko": "현장 리더십",
+        "en": "Field Leadership"
+      },
+      "description": {
+        "ko": "팀원의 의견을 듣고 다음 교대의 우선순위를 정하세요.",
+        "en": "Listen to your team and decide what the next shift should prioritize."
+      },
+      "category": {
+        "ko": "협업",
+        "en": "Teamwork"
+      }
+    },
+    {
+      "id": "teamwork-mission",
+      "folder": "08-teamwork-mission",
+      "title": {
+        "ko": "팀워크 미션",
+        "en": "Teamwork Missions"
+      },
+      "description": {
+        "ko": "현장 대응팀의 역할을 맞추고 인계 과정을 연습하세요.",
+        "en": "Coordinate response roles and practise handing over care."
+      },
+      "category": {
+        "ko": "협업",
+        "en": "Teamwork"
+      }
+    }
+  ]
+}
