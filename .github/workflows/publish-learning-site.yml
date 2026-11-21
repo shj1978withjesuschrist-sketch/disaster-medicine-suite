@@ -1,0 +1,49 @@
+name: Publish bilingual disaster medicine training
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the public HTML release
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: public-site
+          persist-credentials: false
+      - name: Check the language entries and illustration set
+        working-directory: public-site
+        run: |
+          test -s ko/index.html
+          test -s en/index.html
+          test "$(find ko/games -name index.html | wc -l)" -eq 5
+          test "$(find en/games -name index.html | wc -l)" -eq 5
+          test "$(find media -name '*.webp' | wc -l)" -eq 14
+          test -z "$(find . -name '*.js' -print -quit)"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload the learning site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public-site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
