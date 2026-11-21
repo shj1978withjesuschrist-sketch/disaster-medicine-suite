@@ -17,38 +17,78 @@ fieldset{border:0;padding:0;margin:17px 0 0;min-width:0}legend{font-weight:740;m
 @media(max-width:660px){.wrap{padding:0 15px}.mast .wrap{min-height:56px}.hero{grid-template-columns:minmax(0,1fr) 30%;margin:16px 0 22px;min-height:215px}.hero-copy{padding:18px 12px 18px 16px}.hero figure{min-height:150px}.hero h1{font-size:1.85rem}.hero p{font-size:.9rem;margin-bottom:12px}.hero .cta{padding:6px 10px;font-size:.9rem}.catalog{grid-template-columns:1fr}.catalog a{padding:14px 16px}.patient-grid{grid-template-columns:1fr}.images figure img{height:255px}.course-top{padding-top:14px}.question h2{margin:4px 0 8px}.languages a,.languages label{padding:4px 6px}.brand{gap:5px}.question{scroll-margin-top:8px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
+.catalog-nav,.route-picker{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.catalog-nav{margin:0 0 20px}.catalog-nav a,.route-picker a{padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:.91rem;text-decoration:none}
+.catalog-nav a:hover,.route-picker a:hover{border-color:var(--forest)}.catalog-section{margin:0 0 25px;scroll-margin-top:15px}.catalog-section h3{margin:0 0 9px;font-size:1.02rem;font-weight:730;color:var(--soft)}
+.route-picker{margin:16px 0 2px}.route-picker strong{font-size:.86rem;margin-right:3px}.route-picker a[aria-current]{color:white;background:var(--forest);border-color:var(--forest)}
+.assignments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.assignment{margin:12px 0 0;border:1px solid var(--line);border-radius:8px;padding:0 10px 6px}.assignment legend{padding:0 3px}.assignment .choice{align-items:start}.assignment .choice input{margin-top:3px}
+.combined:has(.slot-0 input:checked):has(.slot-1 input:checked) .feedback,.combined:has(.slot-0 input:checked):has(.slot-1 input:checked) .advance{display:block}.combined:has(.slot-0 input:checked):has(.slot-1 input:checked) .advance{display:inline-flex}
+.combined:has(.slot-0 .good:checked):has(.slot-1 .good:checked) .match,.combined:has(.other:checked) .rethink{display:inline}
+.previous-shift p{display:none;margin:0 0 13px;padding:8px 12px;background:#e8efdf;border-left:3px solid #81986f}.mission-board{background:#f0f3e9;padding:9px;border-radius:6px}
+.worksheet{display:block;margin:13px 0}.worksheet textarea{margin-top:4px}
+@media(max-width:700px){.assignments{grid-template-columns:1fr;gap:2px}.catalog-nav{gap:6px}.catalog-nav a{font-size:.8rem;padding:5px 8px}.route-picker{gap:6px}}
+@media print{.mast,.actionbar,.catalog-nav,.back,.skip,.route-picker{display:none!important}.question,.question.first,.exercise:has(.question:target,.result:target) .question.first,.result{display:block!important;margin:10px 0;break-inside:avoid}body{background:white}.wrap{max-width:none;padding:0}.images figure img{max-height:145px}.worksheet textarea{height:auto;min-height:45px;color:black}}
+
 .exercise:has(#q1 .answer:checked) .s1{counter-increment:completed}.exercise:has(#q1 .answer:checked) .s1 .pending{display:none}.exercise:has(#q1 .answer:checked) .s1 .answered{display:inline}
 .exercise:has(#q1 .right:checked) .s1{counter-increment:completed best}.exercise:has(#q1 .right:checked) .s1 .answered{display:none}.exercise:has(#q1 .right:checked) .s1 .correct-status{display:inline}
+.exercise:has(#q1 .slot-0 input:checked):has(#q1 .slot-1 input:checked) .s1{counter-increment:completed}.exercise:has(#q1 .slot-0 input:checked):has(#q1 .slot-1 input:checked) .s1 .pending{display:none}.exercise:has(#q1 .slot-0 input:checked):has(#q1 .slot-1 input:checked) .s1 .answered{display:inline}
+.exercise:has(#q1 .slot-0 .good:checked):has(#q1 .slot-1 .good:checked) .s1{counter-increment:completed best}.exercise:has(#q1 .slot-0 .good:checked):has(#q1 .slot-1 .good:checked) .s1 .answered{display:none}.exercise:has(#q1 .slot-0 .good:checked):has(#q1 .slot-1 .good:checked) .s1 .correct-status{display:inline}
 
 .exercise:has(#q2 .answer:checked) .s2{counter-increment:completed}.exercise:has(#q2 .answer:checked) .s2 .pending{display:none}.exercise:has(#q2 .answer:checked) .s2 .answered{display:inline}
 .exercise:has(#q2 .right:checked) .s2{counter-increment:completed best}.exercise:has(#q2 .right:checked) .s2 .answered{display:none}.exercise:has(#q2 .right:checked) .s2 .correct-status{display:inline}
+.exercise:has(#q2 .slot-0 input:checked):has(#q2 .slot-1 input:checked) .s2{counter-increment:completed}.exercise:has(#q2 .slot-0 input:checked):has(#q2 .slot-1 input:checked) .s2 .pending{display:none}.exercise:has(#q2 .slot-0 input:checked):has(#q2 .slot-1 input:checked) .s2 .answered{display:inline}
+.exercise:has(#q2 .slot-0 .good:checked):has(#q2 .slot-1 .good:checked) .s2{counter-increment:completed best}.exercise:has(#q2 .slot-0 .good:checked):has(#q2 .slot-1 .good:checked) .s2 .answered{display:none}.exercise:has(#q2 .slot-0 .good:checked):has(#q2 .slot-1 .good:checked) .s2 .correct-status{display:inline}
 
 .exercise:has(#q3 .answer:checked) .s3{counter-increment:completed}.exercise:has(#q3 .answer:checked) .s3 .pending{display:none}.exercise:has(#q3 .answer:checked) .s3 .answered{display:inline}
 .exercise:has(#q3 .right:checked) .s3{counter-increment:completed best}.exercise:has(#q3 .right:checked) .s3 .answered{display:none}.exercise:has(#q3 .right:checked) .s3 .correct-status{display:inline}
+.exercise:has(#q3 .slot-0 input:checked):has(#q3 .slot-1 input:checked) .s3{counter-increment:completed}.exercise:has(#q3 .slot-0 input:checked):has(#q3 .slot-1 input:checked) .s3 .pending{display:none}.exercise:has(#q3 .slot-0 input:checked):has(#q3 .slot-1 input:checked) .s3 .answered{display:inline}
+.exercise:has(#q3 .slot-0 .good:checked):has(#q3 .slot-1 .good:checked) .s3{counter-increment:completed best}.exercise:has(#q3 .slot-0 .good:checked):has(#q3 .slot-1 .good:checked) .s3 .answered{display:none}.exercise:has(#q3 .slot-0 .good:checked):has(#q3 .slot-1 .good:checked) .s3 .correct-status{display:inline}
 
 .exercise:has(#q4 .answer:checked) .s4{counter-increment:completed}.exercise:has(#q4 .answer:checked) .s4 .pending{display:none}.exercise:has(#q4 .answer:checked) .s4 .answered{display:inline}
 .exercise:has(#q4 .right:checked) .s4{counter-increment:completed best}.exercise:has(#q4 .right:checked) .s4 .answered{display:none}.exercise:has(#q4 .right:checked) .s4 .correct-status{display:inline}
+.exercise:has(#q4 .slot-0 input:checked):has(#q4 .slot-1 input:checked) .s4{counter-increment:completed}.exercise:has(#q4 .slot-0 input:checked):has(#q4 .slot-1 input:checked) .s4 .pending{display:none}.exercise:has(#q4 .slot-0 input:checked):has(#q4 .slot-1 input:checked) .s4 .answered{display:inline}
+.exercise:has(#q4 .slot-0 .good:checked):has(#q4 .slot-1 .good:checked) .s4{counter-increment:completed best}.exercise:has(#q4 .slot-0 .good:checked):has(#q4 .slot-1 .good:checked) .s4 .answered{display:none}.exercise:has(#q4 .slot-0 .good:checked):has(#q4 .slot-1 .good:checked) .s4 .correct-status{display:inline}
 
 .exercise:has(#q5 .answer:checked) .s5{counter-increment:completed}.exercise:has(#q5 .answer:checked) .s5 .pending{display:none}.exercise:has(#q5 .answer:checked) .s5 .answered{display:inline}
 .exercise:has(#q5 .right:checked) .s5{counter-increment:completed best}.exercise:has(#q5 .right:checked) .s5 .answered{display:none}.exercise:has(#q5 .right:checked) .s5 .correct-status{display:inline}
+.exercise:has(#q5 .slot-0 input:checked):has(#q5 .slot-1 input:checked) .s5{counter-increment:completed}.exercise:has(#q5 .slot-0 input:checked):has(#q5 .slot-1 input:checked) .s5 .pending{display:none}.exercise:has(#q5 .slot-0 input:checked):has(#q5 .slot-1 input:checked) .s5 .answered{display:inline}
+.exercise:has(#q5 .slot-0 .good:checked):has(#q5 .slot-1 .good:checked) .s5{counter-increment:completed best}.exercise:has(#q5 .slot-0 .good:checked):has(#q5 .slot-1 .good:checked) .s5 .answered{display:none}.exercise:has(#q5 .slot-0 .good:checked):has(#q5 .slot-1 .good:checked) .s5 .correct-status{display:inline}
 
 .exercise:has(#q6 .answer:checked) .s6{counter-increment:completed}.exercise:has(#q6 .answer:checked) .s6 .pending{display:none}.exercise:has(#q6 .answer:checked) .s6 .answered{display:inline}
 .exercise:has(#q6 .right:checked) .s6{counter-increment:completed best}.exercise:has(#q6 .right:checked) .s6 .answered{display:none}.exercise:has(#q6 .right:checked) .s6 .correct-status{display:inline}
+.exercise:has(#q6 .slot-0 input:checked):has(#q6 .slot-1 input:checked) .s6{counter-increment:completed}.exercise:has(#q6 .slot-0 input:checked):has(#q6 .slot-1 input:checked) .s6 .pending{display:none}.exercise:has(#q6 .slot-0 input:checked):has(#q6 .slot-1 input:checked) .s6 .answered{display:inline}
+.exercise:has(#q6 .slot-0 .good:checked):has(#q6 .slot-1 .good:checked) .s6{counter-increment:completed best}.exercise:has(#q6 .slot-0 .good:checked):has(#q6 .slot-1 .good:checked) .s6 .answered{display:none}.exercise:has(#q6 .slot-0 .good:checked):has(#q6 .slot-1 .good:checked) .s6 .correct-status{display:inline}
 
 .exercise:has(#q7 .answer:checked) .s7{counter-increment:completed}.exercise:has(#q7 .answer:checked) .s7 .pending{display:none}.exercise:has(#q7 .answer:checked) .s7 .answered{display:inline}
 .exercise:has(#q7 .right:checked) .s7{counter-increment:completed best}.exercise:has(#q7 .right:checked) .s7 .answered{display:none}.exercise:has(#q7 .right:checked) .s7 .correct-status{display:inline}
+.exercise:has(#q7 .slot-0 input:checked):has(#q7 .slot-1 input:checked) .s7{counter-increment:completed}.exercise:has(#q7 .slot-0 input:checked):has(#q7 .slot-1 input:checked) .s7 .pending{display:none}.exercise:has(#q7 .slot-0 input:checked):has(#q7 .slot-1 input:checked) .s7 .answered{display:inline}
+.exercise:has(#q7 .slot-0 .good:checked):has(#q7 .slot-1 .good:checked) .s7{counter-increment:completed best}.exercise:has(#q7 .slot-0 .good:checked):has(#q7 .slot-1 .good:checked) .s7 .answered{display:none}.exercise:has(#q7 .slot-0 .good:checked):has(#q7 .slot-1 .good:checked) .s7 .correct-status{display:inline}
 
 .exercise:has(#q8 .answer:checked) .s8{counter-increment:completed}.exercise:has(#q8 .answer:checked) .s8 .pending{display:none}.exercise:has(#q8 .answer:checked) .s8 .answered{display:inline}
 .exercise:has(#q8 .right:checked) .s8{counter-increment:completed best}.exercise:has(#q8 .right:checked) .s8 .answered{display:none}.exercise:has(#q8 .right:checked) .s8 .correct-status{display:inline}
+.exercise:has(#q8 .slot-0 input:checked):has(#q8 .slot-1 input:checked) .s8{counter-increment:completed}.exercise:has(#q8 .slot-0 input:checked):has(#q8 .slot-1 input:checked) .s8 .pending{display:none}.exercise:has(#q8 .slot-0 input:checked):has(#q8 .slot-1 input:checked) .s8 .answered{display:inline}
+.exercise:has(#q8 .slot-0 .good:checked):has(#q8 .slot-1 .good:checked) .s8{counter-increment:completed best}.exercise:has(#q8 .slot-0 .good:checked):has(#q8 .slot-1 .good:checked) .s8 .answered{display:none}.exercise:has(#q8 .slot-0 .good:checked):has(#q8 .slot-1 .good:checked) .s8 .correct-status{display:inline}
 
 .exercise:has(#q9 .answer:checked) .s9{counter-increment:completed}.exercise:has(#q9 .answer:checked) .s9 .pending{display:none}.exercise:has(#q9 .answer:checked) .s9 .answered{display:inline}
 .exercise:has(#q9 .right:checked) .s9{counter-increment:completed best}.exercise:has(#q9 .right:checked) .s9 .answered{display:none}.exercise:has(#q9 .right:checked) .s9 .correct-status{display:inline}
+.exercise:has(#q9 .slot-0 input:checked):has(#q9 .slot-1 input:checked) .s9{counter-increment:completed}.exercise:has(#q9 .slot-0 input:checked):has(#q9 .slot-1 input:checked) .s9 .pending{display:none}.exercise:has(#q9 .slot-0 input:checked):has(#q9 .slot-1 input:checked) .s9 .answered{display:inline}
+.exercise:has(#q9 .slot-0 .good:checked):has(#q9 .slot-1 .good:checked) .s9{counter-increment:completed best}.exercise:has(#q9 .slot-0 .good:checked):has(#q9 .slot-1 .good:checked) .s9 .answered{display:none}.exercise:has(#q9 .slot-0 .good:checked):has(#q9 .slot-1 .good:checked) .s9 .correct-status{display:inline}
 
 .exercise:has(#q10 .answer:checked) .s10{counter-increment:completed}.exercise:has(#q10 .answer:checked) .s10 .pending{display:none}.exercise:has(#q10 .answer:checked) .s10 .answered{display:inline}
 .exercise:has(#q10 .right:checked) .s10{counter-increment:completed best}.exercise:has(#q10 .right:checked) .s10 .answered{display:none}.exercise:has(#q10 .right:checked) .s10 .correct-status{display:inline}
+.exercise:has(#q10 .slot-0 input:checked):has(#q10 .slot-1 input:checked) .s10{counter-increment:completed}.exercise:has(#q10 .slot-0 input:checked):has(#q10 .slot-1 input:checked) .s10 .pending{display:none}.exercise:has(#q10 .slot-0 input:checked):has(#q10 .slot-1 input:checked) .s10 .answered{display:inline}
+.exercise:has(#q10 .slot-0 .good:checked):has(#q10 .slot-1 .good:checked) .s10{counter-increment:completed best}.exercise:has(#q10 .slot-0 .good:checked):has(#q10 .slot-1 .good:checked) .s10 .answered{display:none}.exercise:has(#q10 .slot-0 .good:checked):has(#q10 .slot-1 .good:checked) .s10 .correct-status{display:inline}
 
 .exercise:has(#q11 .answer:checked) .s11{counter-increment:completed}.exercise:has(#q11 .answer:checked) .s11 .pending{display:none}.exercise:has(#q11 .answer:checked) .s11 .answered{display:inline}
 .exercise:has(#q11 .right:checked) .s11{counter-increment:completed best}.exercise:has(#q11 .right:checked) .s11 .answered{display:none}.exercise:has(#q11 .right:checked) .s11 .correct-status{display:inline}
+.exercise:has(#q11 .slot-0 input:checked):has(#q11 .slot-1 input:checked) .s11{counter-increment:completed}.exercise:has(#q11 .slot-0 input:checked):has(#q11 .slot-1 input:checked) .s11 .pending{display:none}.exercise:has(#q11 .slot-0 input:checked):has(#q11 .slot-1 input:checked) .s11 .answered{display:inline}
+.exercise:has(#q11 .slot-0 .good:checked):has(#q11 .slot-1 .good:checked) .s11{counter-increment:completed best}.exercise:has(#q11 .slot-0 .good:checked):has(#q11 .slot-1 .good:checked) .s11 .answered{display:none}.exercise:has(#q11 .slot-0 .good:checked):has(#q11 .slot-1 .good:checked) .s11 .correct-status{display:inline}
 
 .exercise:has(#q12 .answer:checked) .s12{counter-increment:completed}.exercise:has(#q12 .answer:checked) .s12 .pending{display:none}.exercise:has(#q12 .answer:checked) .s12 .answered{display:inline}
 .exercise:has(#q12 .right:checked) .s12{counter-increment:completed best}.exercise:has(#q12 .right:checked) .s12 .answered{display:none}.exercise:has(#q12 .right:checked) .s12 .correct-status{display:inline}
+.exercise:has(#q12 .slot-0 input:checked):has(#q12 .slot-1 input:checked) .s12{counter-increment:completed}.exercise:has(#q12 .slot-0 input:checked):has(#q12 .slot-1 input:checked) .s12 .pending{display:none}.exercise:has(#q12 .slot-0 input:checked):has(#q12 .slot-1 input:checked) .s12 .answered{display:inline}
+.exercise:has(#q12 .slot-0 .good:checked):has(#q12 .slot-1 .good:checked) .s12{counter-increment:completed best}.exercise:has(#q12 .slot-0 .good:checked):has(#q12 .slot-1 .good:checked) .s12 .answered{display:none}.exercise:has(#q12 .slot-0 .good:checked):has(#q12 .slot-1 .good:checked) .s12 .correct-status{display:inline}
+
+.exercise:has(#q1 .answer[value="0"]:checked) #q2 .from-choice-0{display:block}
+.exercise:has(#q1 .answer[value="1"]:checked) #q2 .from-choice-1{display:block}
+.exercise:has(#q1 .answer[value="2"]:checked) #q2 .from-choice-2{display:block}
